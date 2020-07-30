@@ -1,4 +1,6 @@
 # wolm
+Technical assignment from an interview with WOLM.
+Deployed at: https://garretthensley.github.io/wolm/
 
 ## Project setup
 ```
