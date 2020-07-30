@@ -2,20 +2,25 @@
   <b-container class="mb-4">
     <Nav />
     <b-container class="bg-white">
-      <div class="text-center mb-4">
-        <b-img src="../logo.png" />
+      <div id="header" class="text-center mb-4">
+        <b-img :src="images.logo" />
       </div>
       <div>
-        <b-img src="../banner.png" fluid />
+        <b-img :src="images.banner" fluid />
       </div>
       <b-container class="pb-3">
         <div class="mx-5 text-center d-flex flex-column align-items-center">
-          <h2 class="display-4 text-center text-wrap">Food Distribution Event</h2>
-          <p
-            class="lead"
-          >Please join us for our Food Distribution event on August 7th at 2120 Collier Ave Fort Myers, Fl from 1-4pm.</p>
+          <h2 class="display-4 text-center text-wrap">
+            Food Distribution Event
+          </h2>
+          <p class="lead">
+            Please join us for our Food Distribution event on August 7th at 2120
+            Collier Ave Fort Myers, Fl from 1-4pm.
+          </p>
           <b-list-group class="w-50">
-            <b-list-group-item variant="primary">Event will include:</b-list-group-item>
+            <b-list-group-item variant="primary"
+              >Event will include:</b-list-group-item
+            >
             <b-list-group-item>Family Boxes</b-list-group-item>
             <b-list-group-item>Food & Vegetables</b-list-group-item>
           </b-list-group>
@@ -23,15 +28,15 @@
       </b-container>
       <b-container class="green p-4 text-light">
         <b-row class="nospace">
-          <b-col>
+          <b-col lg="3" class="text-center">
             <div class="mb-4">
-              <b-img src="../logo2.png" />
+              <b-img :src="images.logo2" />
             </div>
             <p>6111 South Pointe Blvd</p>
             <p>Fort Myers, Florida 33919</p>
             <p>239.274.8881</p>
           </b-col>
-          <b-col>
+          <b-col lg="3" class="text-center">
             <p class="lead">AFFILIATED MINISTRIES</p>
             <p>Word Of Life Freeport, NY</p>
             <p>Stop Hurting Start Healing</p>
@@ -42,7 +47,7 @@
             <p>GasparandMichele.com</p>
             <p>SWFL Pastors & Leaders Assn.</p>
           </b-col>
-          <b-col>
+          <b-col lg="3" class="text-center">
             <div>
               <p class="lead">WEEKLY CALENDAR</p>
               <p class="font-weight-bold">Sundays</p>
@@ -70,20 +75,35 @@
               <p>07:00pm…Awaken Youth Ministry</p>
             </div>
           </b-col>
-          <b-col>
+          <b-col lg="3" class="text-center">
             <p class="lead">RECENT BLOG POSTS</p>
             <p class>
               <em>The Unspoken Addiction July 25, 2020</em>
             </p>
-            <p>… The post The Unspoken Addiction appeared first on Gaspar & Michele.</p>
+            <p>
+              … The post The Unspoken Addiction appeared first on Gaspar &
+              Michele.
+            </p>
             <p class>
               <em>Racism in the Church, part 2 July 18, 2020</em>
             </p>
-            <p>Until we as the body of Christ are willing to join together and look into the mirror of God’s word, we will never see racism done away with. It needs to be eradicated first within us, as Christians, before we can affect the world in which we live. The post Racism in the Church, part […]</p>
+            <p>
+              Until we as the body of Christ are willing to join together and
+              look into the mirror of God’s word, we will never see racism done
+              away with. It needs to be eradicated first within us, as
+              Christians, before we can affect the world in which we live. The
+              post Racism in the Church, part […]
+            </p>
             <p class>
               <em>Racism in the Church, part 1 July 11, 2020</em>
             </p>
-            <p>Until we as the body of Christ are willing to join together and look into the mirror of God’s word, we will never see racism done away with. It needs to be eradicated first within us, as Christians, before we can affect the world in which we live. The post Racism in the Church, part […]</p>
+            <p>
+              Until we as the body of Christ are willing to join together and
+              look into the mirror of God’s word, we will never see racism done
+              away with. It needs to be eradicated first within us, as
+              Christians, before we can affect the world in which we live. The
+              post Racism in the Church, part […]
+            </p>
           </b-col>
         </b-row>
       </b-container>
@@ -94,6 +114,15 @@
 <script>
 import Nav from "@/components/Nav.vue";
 export default {
+  data() {
+    return {
+      images: {
+        logo: require("@/assets/logo.png"),
+        banner: require("@/assets/banner.png"),
+        logo2: require("@/assets/logo2.png"),
+      },
+    };
+  },
   components: {
     Nav,
   },
